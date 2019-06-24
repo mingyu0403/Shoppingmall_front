@@ -1,0 +1,20 @@
+.special-list-item{
+  .title {
+    height: 20px;
+  }
+  .content {
+    display: flex;
+    text-align: center;
+
+    .product-img {
+      flex: 1;
+      text-align: center;
+    }
+    .product-info {
+      flex: 2;
+      text-align: center;
+      font-size: 10pt;
+    }
+  }
+
+}

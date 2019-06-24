@@ -1,0 +1,37 @@
+#main {
+  div {
+    border: 1px solid silver;
+  }
+}
+#event-notice {
+  text-align: center;
+  background-color: greenyellow;
+  width: 100vw;
+  height: 100px;
+  font-size: 20pt;
+  font-weight: bold;
+
+  line-height: 100px;
+}
+
+#parent {
+  display: flex;
+  text-align: center;
+  height: 600px;
+
+  #left-list {
+    flex: 1;
+    text-align: center;
+  }
+
+  #main-list {
+    flex: 2;
+    text-align: center;
+  }
+
+  #right-list {
+    flex: 1;
+    text-align: center;
+  }
+
+}
