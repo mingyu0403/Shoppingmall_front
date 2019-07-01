@@ -3,33 +3,47 @@ import AdsList from "./AdsList";
 import BestList from "./BestList";
 import SpecialList from "./SpecialList";
 import './Main.scss'
+import {inject, observer} from "mobx-react";
 
+@inject('stores')
+@observer
 class Home extends Component {
+    componentDidMount() {
+        this.props.stores.ProductStore.fetchItems();
+    }
     render() {
-        const names=['배너식 광고','배너식 광고'
-            ,'배너식 광고','배너식 광고'];
-        return (
-            <div id='main'>
-                <div id='event-notice'>
-                    Main Visual
+        let p = this.props.stores.ProductStore;
+        const  adsItem = ['광고','광고', '광고', '광고'];
+
+        if(!p) {
+            return (
+                <div></div>
+            );
+        }
+        else {
+            return (
+                <div id='main'>
+                    <div id='event-notice'>
+                        Main Visual
+                    </div>
+                    <div id='parent'>
+                        <div id='left-list'>
+                            {p.items && <SpecialList items={p.items}/>}
+                        </div>
+                        <div id='main-list'>
+                            {p.items && <BestList items={p.items}/>}
+                        </div>
+                        <div id='right-list'>
+                            <AdsList items={adsItem}/>
+                        </div>
+
+
+                    </div>
+
                 </div>
+            );
+        }
 
-                <div id='parent'>
-                    <div id='left-list'>
-                        <SpecialList items={names}/>
-                    </div>
-                    <div id='main-list'>
-                        <BestList items={names} />
-                    </div>
-                    <div id='right-list'>
-                        <AdsList items={names} />
-                    </div>
-
-
-                </div>
-
-            </div>
-        );
     }
 }
 

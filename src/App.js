@@ -6,8 +6,13 @@ import './App.css';
 import Stores from "./Stores";
 import Home from "./Home";
 import User from "./User";
+import Product from "./Product";
+import CategoryList from "./Product/CategoryList";
+import Header from "./Header";
+
 
 function App() {
+
   return (
       <Provider stores={Stores}>
           <BrowserRouter>
@@ -17,41 +22,22 @@ function App() {
                           00 0000 000 쇼핑몰
                       </div>
                       <div id='nav'>
-                          <ul id='page-nav'>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-
-                              <li><Link to='/'>Home</Link></li>
-                              <li><Link to='/user/login'>로그인</Link></li>
-                              <li><Link to='/'>회원정보변경</Link></li>
-                              <li><Link to='/'>장바구니</Link></li>
-                          </ul>
-                          <div id='search'>
-                              검색하기
-                              <input />
-                              <button>GO</button>
-                          </div>
+                          <Header />
                       </div>
 
                   </div>
 
                   <ul id='category-nav'>
-                      <li><Link to='/'>상의(남)</Link></li>
-                      <li><Link to='/'>하의(남)</Link></li>
-                      <li><Link to='/'>상의(여)</Link></li>
-                      <li><Link to='/'>하의(여)</Link></li>
-                      <li><Link to='/'>구두</Link></li>
-                      <li><Link to='/'>가방</Link></li>
-                      <li><Link to='/'>소품</Link></li>
+                      <CategoryList  />
                   </ul>
               </header>
 
               <section className='app-body'>
                   <Route path='/' exact component={Home} />
                   <Route path='/user/:command?' exact component={User} />
+                  <Route path='/category/:id' exact component={Product} />
+                  <Route path='/product/:id' exact component={Product}/>
+                  <Route path='/shoppingCart' exact component={Product}/>
               </section>
 
               <footer>

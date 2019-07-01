@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import AdsListItem from "./AdsListItem";
+import ItemAds from "../ListItem/ItemAds";
 
-const AdsList = ({items}) => {
+const AdsList = (props) => {
     return (
-        <div>
-            {items.map((item) => <AdsListItem content={item} />)}
+        <div className='list-body'>
+            {props.items.map((item) => <ItemAds content={item} />)}
         </div>
     );
 };

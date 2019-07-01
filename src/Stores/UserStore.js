@@ -75,6 +75,28 @@ class UserStore {
             return false;
         }
     }
+
+    @action existUser = async (account) => {
+        try {
+            let response = await axios({
+                url: `http://localhost:8080/getUserByAccount/${account}`,
+                method: 'get',
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                },
+                timeout: 3000
+            });
+            if(response.status === 200){
+                return response.data;
+            }
+        } catch (e) {
+            return null;
+        }
+    }
+
+    @action logout = async () => {
+        this.user = null;
+    }
 }
 
 export default UserStore.getInstance();

@@ -1,0 +1,28 @@
+.container {
+  width: 100vw;
+  text-align: center;
+}
+
+.user-content {
+  display: inline-block;
+  width: 50vw;
+  padding: 50px;
+  margin: 100px;
+  border: 2px solid #87bdff;
+  text-align: left;
+}
+
+.join-message {
+  border-top: 1px solid #87bdff;
+  border-bottom: 1px solid #87bdff;
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+
+span {
+  color: #3255ff;
+}
+
+input {
+  margin: 7px;
+}
