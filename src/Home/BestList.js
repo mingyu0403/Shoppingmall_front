@@ -17,7 +17,8 @@ const BestList = (props) => {
             </div>
             <div className='tab-name'>인기 상품</div>
             <div className='list-container'>
-                { props.items.map(product => <ItemStyleB key={product._id} item={product}/> )}
+                {
+                    props.items.map(product => <ItemStyleB key={product._id} item={product}/> )}
             </div>
 
             <div className='tab-name'>특가 상품</div>

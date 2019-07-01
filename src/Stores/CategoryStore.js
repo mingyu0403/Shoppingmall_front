@@ -26,6 +26,7 @@ class CategoryStore {
             console.log(response);
             if(response.status === 200)
                 this.items = response.data;
+
         } catch (e) {
             alert(e.toLocaleString());
         }

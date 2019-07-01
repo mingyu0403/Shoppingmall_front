@@ -82,7 +82,7 @@ class ProductView extends Component {
                         />
                         <button onClick={this.onCommentClick}>등록</button>
                     </div>
-                    <div className='tab-name flex-box'>
+                    <div className='title flex-box'>
                         <div>작성자</div>
                         <div>내용</div>
                         <div>작성일</div>

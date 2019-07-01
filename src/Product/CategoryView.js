@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {inject, observer} from "mobx-react";
-import {Redirect} from 'react-router-dom';
 import './View.scss';
-import BestList from "../Home/BestList";
 import ItemStyleB from "../ListItem/ItemStyleB";
 
 @inject('stores')
@@ -24,7 +22,8 @@ class CategoryView extends Component {
         if (!c.item)
             return <div></div>;
         let imageUrl = `http://localhost:8080/attachment/image/${c.item.attachmentId}`;
-
+        console.log(c.item);
+        console.log(c.item.productList);
         return (
             <div className='mainBody'>
                 <div className='view-container'>

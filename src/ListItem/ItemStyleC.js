@@ -18,7 +18,7 @@ const ItemStyleC = (props) => {
             <div className='sale_content borderRadius'>
                 <div className='sale_product-img'>
                     <Link to={viewProduct}>
-                        <img src={imageUrl} width='100%'/>
+                        <img src={imageUrl} width='200px'/>
                     </Link>
                 </div>
                 <div className='sale_product-info'>
