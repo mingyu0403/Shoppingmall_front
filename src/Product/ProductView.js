@@ -112,6 +112,7 @@ class ProductView extends Component {
             this.state.userAccount = this.props.stores.UserStore.user.account;
             this.state.productId = this.props.productId;
             await this.props.stores.ProductStore.addComment(this.state);
+            this.state.content = '';
         } else {
             alert("로그인을 하신 후, 이용해주시기 바랍니다.")
         }
