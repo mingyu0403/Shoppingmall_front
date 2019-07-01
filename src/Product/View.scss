@@ -23,13 +23,21 @@
     text-align: left;
 
     .price {
-      margin-top: 30px;
+      margin: 30px 0px;
       padding: 10px;
       border-bottom: 1px dotted silver;
     }
 
   }
 }
+button {
+  background-color: white;
+  color: #3255ff;
+  border: #3255ff 1px solid;
+  padding: 0 20px 0 20px;
+  border-radius: 20px;
+}
+
 
 .cat-title {
   background-color: #3255ff;
